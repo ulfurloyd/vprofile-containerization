@@ -1,0 +1,11 @@
+resources
+
+.vagrant
+
+*.log
+*.tmp
+*.swp
+*.swo
+*.swn
+*~
+.#*

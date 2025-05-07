@@ -1,0 +1,19 @@
+#+TITLE: vprofile-containerization
+#+AUTHOR: Eklavya Sood
+
+* Table of Contents :toc:
+- [[#the-project][the Project]]
+- [[#the-tools][the Tools]]
+
+* the Project
+This project utilizes several DevOps tools to containerize an entire web application.
+The application itself is from vprofile-project on GitHub.
+
+* the Tools
+- Docker
+- Vagrant
+- MySQL
+- Nginx
+- Tomcat
+- RabbitMQ
+- Maven
