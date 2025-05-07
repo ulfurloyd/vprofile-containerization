@@ -4,6 +4,12 @@
 * Table of Contents :toc:
 - [[#the-project][the Project]]
 - [[#the-tools][the Tools]]
+- [[#the-containers][the Containers]]
+  - [[#app][app]]
+  - [[#db][db]]
+  - [[#mc][mc]]
+  - [[#rmq][rmq]]
+  - [[#web][web]]
 
 * the Project
 This project utilizes several DevOps tools to containerize an entire web application.
@@ -17,3 +23,31 @@ The application itself is from vprofile-project on GitHub.
 - Tomcat
 - RabbitMQ
 - Maven
+
+* the Containers
+** app
+Dockerfile
+ContainerName: vproapp
+Ports: 8080:8080
+Volume: /usr/local/tomcat/webapps
+** db
+Dockerfile
+ContainerName: vprodb
+Ports: 3306:3306
+Password: MYSQL_ROOT_PASSWORD
+Volume: /var/lib/mysql
+** mc
+Image
+ContainerName: vprocache01
+Ports: 11211:11211
+** rmq
+Image
+ContainerName: vpromq01
+Ports: 5672:5672
+Variables:
+  User: guest
+  Password: guest
+** web
+Dockerfile
+ContainerName: vproweb
+Ports: 80:80
