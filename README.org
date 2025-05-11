@@ -45,8 +45,8 @@ The application itself is from vprofile-project on GitHub.
 - ContainerName: vpromq01
 - Ports: 5672:5672
 - Variables:
-  -- User: guest
-  -- Password: guest
+  - User: guest
+  - Password: guest
 ** web
 - Dockerfile
 - ContainerName: vproweb
