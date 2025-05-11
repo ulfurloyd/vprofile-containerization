@@ -26,44 +26,28 @@ The application itself is from vprofile-project on GitHub.
 
 * the Containers
 ** app
-Dockerfile\\
-
-ContainerName: vproapp\\
-
-Ports: 8080:8080\\
-
-Volume: /usr/local/tomcat/webapps\\
+- Dockerfile
+- ContainerName: vproapp
+- Ports: 8080:8080
+- Volume: /usr/local/tomcat/webapps
 ** db
-Dockerfile\\
-
-ContainerName: vprodb\\
-
-Ports: 3306:3306\\
-
-Password: MYSQL_ROOT_PASSWORD\\
-
-Volume: /var/lib/mysql\\
+- Dockerfile
+- ContainerName: vprodb
+- Ports: 3306:3306
+- Password: MYSQL_ROOT_PASSWORD
+- Volume: /var/lib/mysql
 ** mc
-Image\\
-
-ContainerName: vprocache01\\
-
-Ports: 11211:11211\\
+- Image
+- ContainerName: vprocache01
+- Ports: 11211:11211
 ** rmq
-Image\\
-
-ContainerName: vpromq01\\
-
-Ports: 5672:5672\\
-
-Variables:\\
-
-  User: guest\\
-
-  Password: guest\\
+- Image
+- ContainerName: vpromq01
+- Ports: 5672:5672
+- Variables:
+  -- User: guest
+  -- Password: guest
 ** web
-Dockerfile\\
-
-ContainerName: vproweb\\
-
-Ports: 80:80\\
+- Dockerfile
+- ContainerName: vproweb
+- Ports: 80:80
