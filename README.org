@@ -13,7 +13,7 @@
 
 * the Project
 This project utilizes several DevOps tools to containerize an entire web application.
-The application itself is from vprofile-project on GitHub.
+The application itself is from [[https://github.com/hkhcoder/vprofile-project.git][vprofile-project]] on GitHub.
 
 * the Tools
 - Docker
