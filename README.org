@@ -3,7 +3,9 @@
 
 * Table of Contents :toc:
 - [[#the-project][the Project]]
+- [[#the-structure][the Structure]]
 - [[#the-tools][the Tools]]
+- [[#the-components][the Components]]
 - [[#the-containers][the Containers]]
   - [[#app][app]]
   - [[#db][db]]
@@ -15,6 +17,15 @@
 This project utilizes several DevOps tools to containerize an entire web application.
 The application itself is from [[https://github.com/hkhcoder/vprofile-project.git][vprofile-project]] on GitHub.
 
+* the Structure
+
+[[./architecture.jpg]]
+
+- ~DockerFiles/~: Contains dockerfiles for each container
+- ~docker-compose.yaml~: Defines the multi-container application
+- ~Vagrantfile~: VM provisioning for deployment
+- ~src/~: Upstream application source code (not modified)
+
 * the Tools
 - Docker
 - Vagrant
@@ -23,6 +34,13 @@ The application itself is from [[https://github.com/hkhcoder/vprofile-project.gi
 - Tomcat
 - RabbitMQ
 - Maven
+
+* the Components
+- Nginx: Reverse proxy
+- Tomcat: Application server
+- MySQL: Database
+- RabbitMQ: Messaging
+- Memcached: Caching
 
 * the Containers
 ** app
@@ -51,3 +69,4 @@ The application itself is from [[https://github.com/hkhcoder/vprofile-project.gi
 - Dockerfile
 - ContainerName: vproweb
 - Ports: 80:80
+  
